@@ -1,4 +1,5 @@
 {
+  "homepage": "https://tomahim.github.io/trail-explorer",
   "name": "trail-explorer",
   "version": "1.0.0",
   "description": "Interactive web application for exploring trail running routes",
