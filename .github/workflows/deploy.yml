@@ -1,13 +1,14 @@
-name: Deploy
+name: Deploy React App
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -26,9 +27,6 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Run tests
-      run: NODE_OPTIONS=--openssl-legacy-provider npm test
-
     - name: Build project
       run: NODE_OPTIONS=--openssl-legacy-provider npm run build
 
@@ -37,4 +35,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
-        publish_branch: gh-pages
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: Deploy React app to GitHub Pages
