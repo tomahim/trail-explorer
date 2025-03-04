@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1">
+  <trk>
+    <name>GRV Mont Ventoux</name>
+    <trkseg>
+      <trkpt lat="44.1738" lon="5.2810"><ele>500</ele></trkpt>
+      <trkpt lat="44.1839" lon="5.2911"><ele>700</ele></trkpt>
+      <trkpt lat="44.1940" lon="5.3012"><ele>1000</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

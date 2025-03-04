@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1">
+  <trk>
+    <name>La Saintélyon</name>
+    <trkseg>
+      <trkpt lat="45.7597" lon="4.8422"><ele>300</ele></trkpt>
+      <trkpt lat="45.7698" lon="4.8523"><ele>350</ele></trkpt>
+      <trkpt lat="45.7799" lon="4.8624"><ele>400</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>
