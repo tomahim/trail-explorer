@@ -18,13 +18,16 @@ const ElevationProfile = ({ gpxFile }) => {
         const gpx = parser.parseFromString(gpxText, 'text/xml');
         const geo = toGeoJSON.gpx(gpx);
         
+        // Extract elevation and distance
         const elevations = geo.features[0].geometry.coordinates.map(coord => coord[2]);
         const distances = elevations.map((_, index) => index);
 
+        // Destroy existing chart if it exists
         if (chartInstance) {
           chartInstance.destroy();
         }
 
+        // Create new chart
         const ctx = chartRef.current.getContext('2d');
         const newChartInstance = new Chart(ctx, {
           type: 'line',
@@ -64,6 +67,7 @@ const ElevationProfile = ({ gpxFile }) => {
 
     fetchElevationData();
 
+    // Cleanup
     return () => {
       if (chartInstance) {
         chartInstance.destroy();

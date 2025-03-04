@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'trail-gradient': 'linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3))'
+        'trail-gradient': 'linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3))',
       },
       colors: {
         'trail-primary': '#2c3e50',
